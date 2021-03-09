@@ -6,17 +6,25 @@ body {
 .root {
   display: flex;
 }
-/* .dashboard-title {
-  font-size: 22px;
+/* .dashboard-welcome-title {
+  font-size: 60px;
+  font-family: "Poppins Light";
+  margin-bottom: 10px;
+  width: 900px;
+  height: 84px;
+} */
+.dashboard-title {
+  font-size: 40px;
   font-family: "Poppins Light";
  text-align: center;
   margin-right: 300px;
-} */
+}
 
 h1{
   font-size: 40px;
   font-family: "Poppins Light";
   width: auto;
+  padding-top: -30px;
 }
 
 .dashboard-container {
@@ -436,6 +444,7 @@ h1{
    padding: 16px 16px 20px 20px;
   border: 1px solid #888;
   width: 500px;
+  border-radius: 4px;
 }
 
 .modal-content input:disabled,
@@ -618,7 +627,7 @@ h1{
 }
 
 .select-status_modal {
-  width: 485px;
+  width: 465px;
   height: 39px;
   padding: 8px;
   border: 1px solid var(--mgm-input-border);

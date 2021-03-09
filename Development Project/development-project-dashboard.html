@@ -103,10 +103,15 @@
         </div>
     </div>
     <div class="dashboard-container">
-        <section>
+        <!-- <section>
             
             <div  class="dashboard-title">
             <h1 >Development&nbsp;Projects&nbsp;Dashboard</h1>
+            </div>
+        </section> -->
+        <section>
+            <div class="dashboard-title">
+                <div class="dashboard-welcome-title welcome-title"><b>Development Projects Dashboard</b></div>
             </div>
         </section>
         <section class="dashboard-section dashboard-cards">
@@ -187,7 +192,10 @@
                             <div class="hr-margin">Bootsie's War</div>
                         </td>
                         <td>
-                            <div class="hr-margin">MK/RH</div>
+                            <div class="tooltip">
+                            <div class="hr-margin">MK/RH<span class="tooltiptext">Show 
+                                start action film</span></div>
+                                </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -202,7 +210,12 @@
                             <div class="hr-margin">Bootsie's War</div>
                         </td>
                         <td>
-                            <div class="hr-margin">MK/RH</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">MK/RH<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
+                            
+                            
                         </td>
                         <td>
                             <div class="tooltip">
@@ -218,7 +231,10 @@
                             <div class="hr-margin">The End Game</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -233,7 +249,10 @@
                             <div class="hr-margin">The End Game</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -248,7 +267,10 @@
                             <div class="hr-margin">The Avengers</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -263,7 +285,10 @@
                             <div class="hr-margin">The End Game</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -278,7 +303,10 @@
                             <div class="hr-margin">The End Game</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -293,7 +321,10 @@
                             <div class="hr-margin">The End Game</div>
                         </td>
                         <td>
-                            <div class="hr-margin">Marvels</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">Marvels<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -308,7 +339,10 @@
                             <div class="hr-margin">The Handmaid's Tale</div>
                         </td>
                         <td>
-                            <div class="hr-margin">MK</div>
+                            <div class="tooltip">
+                                <div class="hr-margin">MK<span class="tooltiptext">Show 
+                                    start action film</span></div>
+                                    </div>
                         </td>
                         <td>
                             <div class="tooltip">
@@ -458,10 +492,50 @@
         <div class="sidenav-menu">
             <div>
                 <div class="actionable-items">
-                    <div id="actionable-items-scrollto" class="actionable-items-scrollto">Actionable Items
+                    <div  ><b>Add New Actionable Items</b>
                         <a href="javascript:void(0)" class="closebtn" onclick="closeActionItemNav()">&times;</a>
                     </div>
-                    <hr />
+                   
+                    <div class="form-control">
+                        <label for="add-action-item" style="display: none" >Add New Action Item</label>
+                        <br />
+                        <textarea style="overflow: hidden" name="add-action-item" id="add-action-item"
+                            onclick="displayTitle(this)" placeholder="Add Action Item" rows="5"></textarea>
+                    </div>
+                    <div class="modal-heading">
+                        <div class="modal-text">Does the Action have a due date?</div>
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox" id="req-due-date" />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="due-date" style="display: none">Due Date</label>
+                        <br />
+                        <input type="date" placeholder="Due Date" name="due-date" id="due-date" disabled
+                            onclick="displayTitle(this)" />
+                    </div>
+                    <div class="form-control">
+                        <label for="select-status" style="display: none">Select Status</label>
+                        <br />
+                        <select placeholder="Select Status" name="select-status" id="select-status"
+                            class="select-status_modal" onclick="displayTitle(this)">
+                            <option selected value="">Select Status</option>
+                            <option value="InProgres">In Progress</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Complete">Complete</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="due-date" style="display: none">Related Project</label>
+                        <br />
+                        <input type="text" placeholder="Related Project" name="due-date" id="due-date"
+                            onclick="displayTitle(this)" />
+                    </div>
+                    <br>
+                     <hr />
                     <section class="item-list">
                         <div class="item-content">
                             <div class="action-item">
@@ -498,38 +572,6 @@
                     </section>
                     </section>
                     <hr />
-                    <div class="form-control">
-                        <label for="add-action-item" style="font-weight: bold">Add New Action Item</label>
-                        <br />
-                        <textarea style="overflow: hidden" name="add-action-item" id="add-action-item"
-                            onclick="displayTitle(this)" placeholder="Add Action Item" rows="5"></textarea>
-                    </div>
-                    <div class="modal-heading">
-                        <div class="modal-text">Does the Action have a due date?</div>
-                        <div>
-                            <label class="switch">
-                                <input type="checkbox" id="req-due-date" />
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-control">
-                        <label for="due-date" style="display: none">Due Date</label>
-                        <br />
-                        <input type="date" placeholder="Due Date" name="due-date" id="due-date" disabled
-                            onclick="displayTitle(this)" />
-                    </div>
-                    <div class="form-control">
-                        <label for="select-status" style="display: none">Select Status</label>
-                        <br />
-                        <select placeholder="Select Status" name="select-status" id="select-status"
-                            class="select-status_modal" onclick="displayTitle(this)">
-                            <option selected value="">Select Status</option>
-                            <option value="InProgres">In Progress</option>
-                            <option value="Pending">Pending</option>
-                            <option value="Complete">Complete</option>
-                        </select>
-                    </div>
                     <div class="form-control">
                         <div class="form-control form-btn-row">
                             <button class="form-submit-btn" type="submit" onclick="closeActionItemNav()">SAVE</button>
