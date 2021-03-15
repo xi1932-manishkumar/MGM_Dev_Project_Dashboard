@@ -114,6 +114,21 @@ h1{
   border-radius: 4%;
   
 } */
+.form-parent{
+  
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex: 1;
+    max-height: 270px;
+    /* top: 0px; */
+    left: 1330px;
+    width: 590px;
+    border-radius: 4px 0px 0px 4px;
+    /* opacity: 1; */
+    
+    }
+
 
 @media screen and (max-width: 600px) {
   .dashboard-title {
@@ -199,6 +214,7 @@ h1{
     margin-top: 20px;
     justify-content: center;
     width: calc(100% - 40px);
+    justify-content: space-between;
     height: 150px;
     text-align: center;
   }
@@ -551,8 +567,8 @@ opacity: 1;
   font-family: "Poppins Regular";
   padding: 10px;
   border-radius: 4px;
-  width: calc(100% - 30px);
-  height: 70px;
+  width: calc(79% - 30px);
+  height: 100px;
   /* margin-top: 30px; */
 }
 /*Testing purpose */
@@ -791,6 +807,20 @@ input:checked + .slider:before {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dashboard-cards .dashboard-card:last-child {
+    margin-top: 20px;
+    justify-content: center;
+    width: 388px;
+    justify-content: space-between;
+    height: 150px;
+    text-align: center;
+  }
+  .dashboard-cards .dashboard-card:last-child .card-stat {
+    padding-right: 0;
   }
 }
 
@@ -1208,6 +1238,7 @@ input:checked + .slider:before {
   font-size: 14px;
   overflow-y: scroll;
   max-height: 55vh;
+  position: fixed;
 }
 
 .sidenav-menu #due-date {
@@ -1387,9 +1418,7 @@ input:checked + .slider:before {
 }
 
  ::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-  height: auto;
+ display: none;
 }
 /* ::-webkit-scrollbar {
   width: 0px;

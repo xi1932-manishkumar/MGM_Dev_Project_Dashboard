@@ -488,19 +488,21 @@
             </div>
         </section>
     </div>
+    
     <div id="actionItemSidenav" class="actionSidenav">
         <div class="sidenav-menu">
-          <div class="scroll">
             <div class="actionable-items">
               <div id="actionable-items-scrollto" class="actionable-items-scrollto">Actionable Items
                 <a href="javascript:void(0)" class="closebtn" onclick="closeActionItemNav()">&times;</a></div>
+               
               
-              <div class="form-control">
-                <label for="add-action-item"  style="display: none">Add New Action Item</label>
-                <br />
-                <textarea style="overflow: hidden" name="add-action-item" id="add-action-item" onclick="displayTitle(this)"
-                  placeholder="Add Action Item" rows="5"></textarea>
-              </div>
+                 <div class="form-parent">
+                <div class="form-control">
+                    <label for="add-action-item"  style="display: none">Add New Action Item</label>
+                    <br />
+                    <textarea style="overflow: hidden" name="add-action-item" id="add-action-item"
+                        onclick="displayTitle(this)" placeholder="Add Action Item" rows="5"></textarea>
+                </div>
               <div class="modal-heading">
                 <div class="modal-text">Does the Action have a due date?</div>
                 <div>
@@ -510,12 +512,12 @@
                   </label>
                 </div>
               </div>
-              <div class="form-control">
+              <div class="form-control" style="width: 465px;">
                 <label for="due-date" style="display: none">Due Date</label>
                 <br />
                 <input type="date" placeholder="Due Date" name="due-date" id="due-date" disabled />
               </div>
-              <div class="form-control">
+              <div class="form-control" style="width: 465px;">
                 <label for="select-status" style="display: none">Select Status</label>
                 <br />
                 <div class="custom-select">
@@ -534,7 +536,8 @@
                   <button class="form-cancel-btn" onclick="closeActionItemNav()">CANCEL</button>
                 </div>
               </div>
-              <hr />
+            </div>
+            <!-- <hr /> -->
               <section class="item-list">
                 <div class="item-content">
                   <div class="action-item">
@@ -645,11 +648,12 @@
               </section>
               </section>
               <hr />
-            </div>
+           
           </div>
         </div>
         <div class="sidenav-overlay" onclick="closeActionItemNav()"></div>
       </div>
+    
     <script>
 
         document.getElementById("req-due-date").onchange = function () {
